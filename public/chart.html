@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoTracker - Charts</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="nav-content">
+          <a href="/" class="logo">CryptoTracker</a>
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/chart.html" class="active">Charts</a></li>
+            <li><a href="/alerts.html">Alerts</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Cryptocurrency Charts</h1>
+      <p>Select a cryptocurrency to view detailed price charts</p>
+    </section>
+
+    <div id="crypto-detail" class="crypto-detail hidden">
+      <div class="back-button">
+        <button id="back-to-list" class="btn btn-outline">Back to List</button>
+      </div>
+      <div class="crypto-header">
+        <h2 id="crypto-name">Bitcoin</h2>
+        <div class="crypto-price-container">
+          <span id="crypto-price" class="crypto-price">$0.00</span>
+          <span id="crypto-change" class="crypto-change">0.00%</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Price Chart</h3>
+          <p class="text-muted">Historical price data (daily interval)</p>
+        </div>
+        <div class="card-content">
+          <div class="chart-container">
+            <canvas id="price-chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-4" id="crypto-stats">
+        <!-- Stats will be inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <div id="crypto-grid" class="crypto-grid">
+      <div class="loading">Loading cryptocurrencies...</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Data provided by CoinCap API</p>
+    </div>
+  </footer>
+
+  <script src="chart.js"></script>
+</body>
+</html>

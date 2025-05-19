@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoTracker - Alerts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="nav-content">
+          <a href="/" class="logo">CryptoTracker</a>
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/chart.html">Charts</a></li>
+            <li><a href="/alerts.html" class="active">Alerts</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Price Alerts</h1>
+      <p>Set up alerts for cryptocurrency price movements</p>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="card-header">
+          <h2>Create Alert</h2>
+          <p class="text-muted">Set up a new price alert for a cryptocurrency</p>
+        </div>
+        <div class="card-content">
+          <form id="alert-form" class="form">
+            <div class="form-group">
+              <label for="crypto-select">Cryptocurrency</label>
+              <select id="crypto-select" required>
+                <option value="">Select a cryptocurrency</option>
+                <!-- Options will be populated by JavaScript -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="target-price">Target Price (USD)</label>
+              <input type="number" id="target-price" step="0.000001" min="0" placeholder="Enter target price" required>
+            </div>
+
+            <div class="form-group">
+              <label>Alert Condition</label>
+              <div class="radio-group">
+                <div class="radio-option">
+                  <input type="radio" id="above" name="condition" value="above" checked>
+                  <label for="above">Price goes above target</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="below" name="condition" value="below">
+                  <label for="below">Price goes below target</label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Create Alert</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Your Alerts</h2>
+          <p class="text-muted">Manage your existing price alerts</p>
+        </div>
+        <div class="card-content">
+          <div id="alerts-list" class="alerts-list">
+            <!-- Alerts will be populated by JavaScript -->
+            <div class="empty-state">
+              <div class="empty-icon">🔔</div>
+              <p>You don't have any alerts set up yet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Data provided by CoinCap API</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden">
+    <div class="toast-content">
+      <span id="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="alerts.js"></script>
+</body>
+</html>

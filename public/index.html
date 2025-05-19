@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoTracker - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="nav-content">
+          <a href="/" class="logo">CryptoTracker</a>
+          <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/chart.html">Charts</a></li>
+            <li><a href="/alerts.html">Alerts</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Cryptocurrency Tracker</h1>
+      <p>Track prices and set alerts for your favorite cryptocurrencies</p>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Top Cryptocurrencies</h2>
+          <p class="text-muted">Based on market capitalization</p>
+        </div>
+        <a href="/chart.html" class="btn btn-outline">View All</a>
+      </div>
+      <div class="card-content">
+        <div id="crypto-list" class="crypto-list">
+          <div class="loading">Loading top cryptocurrencies...</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="card-header">
+          <h2>Charts</h2>
+          <p class="text-muted">View detailed price charts for any cryptocurrency</p>
+        </div>
+        <div class="card-content card-actions">
+          <a href="/chart.html" class="btn btn-primary">View Charts</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Price Alerts</h2>
+          <p class="text-muted">Set up alerts for price movements</p>
+        </div>
+        <div class="card-content card-actions">
+          <a href="/alerts.html" class="btn btn-primary">Manage Alerts</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Data provided by CoinCap API</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
