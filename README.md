@@ -1,5 +1,5 @@
 # CryptoTracker
-
+##Name: Ester Manukyan
 A simple cryptocurrency tracking application that allows users to view cryptocurrency prices, charts, and set price alerts.
 
 ## Features
